@@ -1,7 +1,7 @@
 ### Site Settings ###
 title               : Vikas Sharma, Ph. D.
 description         : This is personal webpage of Vikas Sharma.
-baseurl             : "/VikasSharma"
+baseurl             : ""
 # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository  : vickysharma0812/VikasSharma
 # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
