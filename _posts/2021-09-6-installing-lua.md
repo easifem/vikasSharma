@@ -3,7 +3,7 @@ title: 'Introduction to <i class="fas fa-terminal text-warning"></i> Lua Program
 tags: [Lua, LuaProgramming, MakeFiles]
 style: border
 color: primary
-description: Lua is simple, small, effecient, extensible, and powerful. It can talk to C, C++, Fortran, and many other language. This article shows my process of downloading, building and installing Lua from source :rocket:.
+description: Day 1 of programming in Lua. In this note I have explained my understanding of Lua language, and procedure to install lua on my system. :rocket:.
 ---
 
 # LUA Programming
