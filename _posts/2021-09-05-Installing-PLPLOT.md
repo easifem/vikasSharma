@@ -1,9 +1,9 @@
 ---
 title: 'Using <i class="fas fa-heart text-warning"></i> PLPLOT with Fortran'
-tags: [Fortran, PLPLOT, CMAKE]
+tags: [PLPLOT, Fortran]
 style: border
 color: primary
-description: To do
+description: In this note I have explained about how to install PLPLOT graph plotting library and use with Fortran.
 ---
 
 # PLPLOT
