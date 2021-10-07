@@ -1,0 +1,105 @@
+### Site Settings ###
+title               : Vikas Sharma, Ph. D.
+description         : This is personal webpage of Vikas Sharma.
+baseurl             : "github.com/vickysharma0812/VikasSharma"
+# Change to empty quotes if you are hosting your site at <your-username>.github.io directly
+repository  : vickysharma0812/vickysharma0812.github.io
+# Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
+remote_theme  : YoussefRaafatNasry/portfolYOU
+
+### Plugins ###
+plugins:
+  - jemoji
+
+### Navbar Settings ###
+nav_exclude:        # The following paths are excluded from navbar
+  - pages/tags.html
+  - pages/404.html
+  - pages/index.md
+  - documentation/partials/**    # For Documentation Only
+
+### Author Info ###
+author:
+  name              : Vikas Sharma
+  image             : https://avatars.githubusercontent.com/u/25534832?v=4
+  behance           : vickysharma0812
+# dribbble          : your_username
+  email             : vickysharma0812@gmail.com
+  facebook          : vickysharma0812
+  github            : vickysharma0812
+  gitlab            : vickysharma0812
+  instagram         : vickysharma0812
+# kaggle            : your_username
+  linkedin          : vickysharma0812
+  medium            : vickysharma0812
+# soundcloud        : your_username
+# spotify           : your_username
+# stackoverflow     : your_user_id
+# tumblr            : your_username.tumblr.com
+# twitch            : your_username
+  twitter           : vickysharma0812
+# vimeo             : your_username
+# youtube           : your_channel_name
+# keybase           : your_username
+
+### Posts ###
+permalink: /blog/:title
+
+### Collections ###
+collections:
+  publications:
+    output: true
+    permalink: /publications/:name
+  lectures:
+    output: true
+    permalink: /lectures/:name
+  projects:
+    output: true
+    permalink: /projects/:name
+  elements:              # For Documentation Only
+    output: true         # For Documentation Only
+
+### Disqus ###
+disqus:
+  shortname: Vikas Sharma    # Your website Shortname on disqus
+
+### Analytics ###
+# analytics:
+#   enabled: false  # Set true to enable analytics
+#   google:
+#     tracking_id: your-google-tracking-id
+
+### Defaults for collections ###
+defaults:
+  - scope:
+      path: ""
+      type: "publications"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "lectures"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "page"
+  - scope:        # For Documentation Only
+      path: ""    # For Documentation Only
+      type: "elements"    # For Documentation Only
+    values:               # For Documentation Only
+      layout: "element"   # For Documentation Only
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      comments: false     # Set to true to enable disqus comments
+
+### Exclude from processing ###
+exclude:
+  - README.md
+  - CONTRIBUTING.md
+  - LICENSE
+  - "*.log"
