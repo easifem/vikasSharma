@@ -1,6 +1,6 @@
 ---
 title: 'Introduction to <i class="fas fa-terminal text-warning"></i> Lua Programming'
-tags: [Lua, LuaProgramming, MakeFiles]
+tags: [Lua]
 style: border
 color: primary
 description: Day 1 of programming in Lua. In this note I have explained my understanding of Lua language, and procedure to install lua on my system. :rocket:.

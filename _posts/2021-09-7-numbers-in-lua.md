@@ -1,6 +1,6 @@
 ---
-title: 'Introduction to <i class="fas fa-terminal text-warning"></i> Lua Programming'
-tags: [LuaProgramming]
+title: 'Numbers in Lua <i class="fas fa-heart text-warning"></i>'
+tags: [Lua]
 style: border
 color: primary
 description: Day-2 of programming in Lua. In this note, I have explained my understanding about the number system in Lua.
