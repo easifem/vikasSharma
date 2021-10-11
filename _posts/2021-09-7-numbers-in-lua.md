@@ -10,8 +10,8 @@ description: Day-2 of programming in Lua. In this note, I have explained my unde
 
 Lua uses two alternative representations for numbers:
 
--   [ ] Double precision, 64-bit, floating-point numbers
--   [ ] 64-bit, integer numbers
+- Double precision, 64-bit, floating-point numbers
+- 64-bit, integer numbers
 
 > Note that floats, reals, or double-precision implies 64-bit real numbers in Lua
 
