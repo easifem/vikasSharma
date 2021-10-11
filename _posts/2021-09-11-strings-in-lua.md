@@ -3,7 +3,7 @@ title: 'Strings in Lua'
 tags: [Lua]
 style: border
 color: primary
-description: Day-3 of programming in Lua. In this note, I have explained my understanding about the string system in Lua.
+description: Day-3 of programming in Lua <i class="fas fa-terminal text-warning"></i>. In this note, I have explained my understanding about the string system in Lua.
 ---
 
 # Strings in Lua

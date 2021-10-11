@@ -1,5 +1,5 @@
 ---
-title: 'Using <i class="fas fa-heart text-warning"></i> PLPLOT with Fortran'
+title: 'Using PLPLOT with Fortran'
 tags: [PLPLOT, Fortran]
 style: border
 color: primary
