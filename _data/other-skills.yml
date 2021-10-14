@@ -1,7 +1,11 @@
-- name: Adobe Photoshop
-  percentage: 95
-  color: info
+- name: GTK
+  percentage: 30
+  color: primary
 
-- name: Adobe Illustrator
-  percentage: 90
+- name: Adobe Photoshop
+  percentage: 60
   color: success
+
+- name: Inkscape/ Affinity Design
+  percentage: 70
+  color: danger

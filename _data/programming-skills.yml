@@ -1,11 +1,27 @@
-- name: HTML5/CSS3
+- name: Fortran
   percentage: 90
+  color: primary
+
+- name: Lua
+  percentage: 80
+  color: success
+
+- name: C
+  percentage: 70
   color: danger
 
-- name: Go
-  percentage: 80
-  color:
+- name: HTML/CSS
+  percentage: 40
+  color: warning
 
 - name: Python
-  percentage: 70
-  color: secondary
+  percentage: 60
+  color: info
+
+- name: Matlab
+  percentage: 60
+  color: primary
+
+- name: HTML/CSS
+  percentage: 60
+  color: success

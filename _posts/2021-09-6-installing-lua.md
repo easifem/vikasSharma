@@ -207,7 +207,7 @@ Each piece of code that lua execute is called chunk. So in `hello.lua` the chunk
 
 We can start lua in an interactive mode by just typing `lua` in the terminal window. The result is shown in the following screenshot.
 
-![Screenshot of interactive mode](./media/lua_interactive_mode_screen.png)
+![Screenshot of interactive mode](../assets/images/lua_interactive_mode_screen.png)
 
 Now lua is waiting for our commands. So we can type lua commands in it.
 
