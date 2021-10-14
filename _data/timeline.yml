@@ -1,17 +1,29 @@
-- title: Student, Harvard CS
-  from: 2014
-  to: 2018
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-               reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+- title: Postdoctral Researcher, Kyoto University, Japan
+  from: Apr, 2021
+  to: til date
+  description: At present, I am working as a postdoctoral researcher at Graduate School Agriculture, Kyoto University. I have developed a space-time finite element for soil dynamics and earthquake engineering problem, wherein the numerical dissipation of high-frequency components can be controlled by the user. I have also developed a space-time finite element method with moving mesh technique to study the transient unconfined seepage flow in dams, levees, and other earthen structures. I am also leading a research team to develop the generalized framework of space-time FEM for dynamic soil-structure interaction problems. This research involves high-performance-computing by using OpenMP, MPI and GPU. I am also investigating the failure of levee and embankments due to overflow by using physical and numerical modeling. For this research, I am developing a software for solving the coupled Navier-Stokes and Darcy-Brinkmann Equations.
 
-- title: Software Engineer, Google, UK
-  from: 2018
-  to: present
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-               reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+- title: Postdoctral Fellow, IIT Bombay, India
+  from: Feb, 2019
+  to: Jan, 2021
+  description: I worked as Institute Postdoctoral Fellow in the Department of Civil Engineering, IIT Bombay, India. During this time, my research was focused on thermo-hydro-mechanical behavior of frozen and unfrozen soils. I investigated on the influence of volumetric ice-content on the shear stregth characteristics of frozen soils. I have also developed an experimental procedure to establish freezing characteristics of partially saturated soils. In addition, I developed a numerical method and computer program to estimate the thermal properties of frozen and unfrozen soils by interpretating Dual-probe heat-pulse data.
+
+- title: Postdoctral Researcher, Kyoto University, Japan
+  from: Oct, 2018
+  to: Jan, 2019
+  description: I worked as a postdoctoral researcher at Graduate School of Agriculture, Kyoto University, Japan, wherein I investigated the seismic performance of a rockfill dam. For this research I developed a computer program for Finite Element Method in Fortran.
+
+- title: Ph.D., MEXT fellow, Kyoto University, Japan
+  from: Oct, 2015
+  to: Sept, 2018
+  description: I attended Graduate School of Agriculture, Kyoto University, as a doctoral student. My research was supported by Ministry of Education Culture, Sports, Science and Technology <a href="https://www.in.emb-japan.go.jp/Education/japanese_government_scholarships.html">MEXT</a>. The title of my doctoral thesis is "Development of Space-Time Finite Element Method for Seismic Analysis of Hydraulic Structure".
+
+- title: Junior research fellow
+  from: Jun, 2013
+  to: Sept, 2015
+  description: I worked as a research fellow in the department of Civil Engineering, IIT Bombay, India. During this time, I worked in the area of heat and mass transfer in porous medium. I also carried out geotechnical testings for consultancy projects of Environmental Geotechnics laboratory.
+
+- title: B.Tech., IIT Bombay, India
+  from: Jun, 2009
+  to: May, 2013
+  description: I studied civil engineering at undergraduate level at Indian Institute of Technology, Bombay (IIT Bombay).

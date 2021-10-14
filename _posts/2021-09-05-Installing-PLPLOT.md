@@ -1,5 +1,5 @@
 ---
-title: 'Using <i class="fas fa-heart text-warning"></i> PLPLOT with Fortran'
+title: 'Using PLPLOT with Fortran'
 tags: [PLPLOT, Fortran]
 style: border
 color: primary
@@ -10,7 +10,7 @@ description: In this note I have explained about how to install PLPLOT graph plo
 
 ## Introduction
 
-PLplot is a software package for creating scientific plots . It is cross-platform ❤, which means it will work on Windows, Unix, and Linux system. The PLplot software, which is primarily licensed under [the LGPL](http://www.gnu.org/licenses/lgpl.html) 🔥. It is primarily written in C language, and it has  [bindings](http://plplot.sourceforge.net/index.php#bindings) 🔗 for several other language including Fortran 🖥️ .
+PLplot is a software package for creating scientific plots . It is cross-platform ❤, which means it will work on Windows, Unix, and Linux system. The PLplot software is primarily licensed under [the LGPL](http://www.gnu.org/licenses/lgpl.html) 🔥. It is written in C language, and it has  [bindings](http://plplot.sourceforge.net/index.php#bindings) 🔗 for several other language including Fortran 🖥️ .
 
 The PLplot core library can be used to create 
 
@@ -59,17 +59,23 @@ brew install plplot
 git clone https://git.code.sf.net/p/plplot/plplot plplot-plplot
 ```
 
-extra libs
+I have also installed some extra libraries, which are given below. 
+
+- `libcairo-dev`
+- `libglu1-mesa-dev`
+- `freeglut3-dev`
+- `mesa-common-dev`
+- `pyqt5`
+- `pyqt5-tools`
 
 ```bash
 sudo apt install libcairo-dev libglu1-mesa-dev freeglut3-dev mesa-common-dev
 pip3 install pyqt5 pyqt5-tools 
 ```
 
+### Building 🪛
 
-### Building
-
-After downloading the source code, run following command in terminal
+After downloading the source code, run the following command inside of terminal
 
 ```bash
 cd plplot-plplot
@@ -77,7 +83,7 @@ git branch $(whoami)
 git checkout $(whoami)
 ```
 
-We will use `-DCMAKE_INSTALL_PREFIX` to define where we want to install `PLplot`. 
+We will use `-DCMAKE_INSTALL_PREFIX` to specify the director wherein `PLplot` will be installed. 
 
 
 ```sh
@@ -86,17 +92,14 @@ cmake --build ./build --target all
 cmake --build ./build --target install
 ```
 
-My Configuration:
-
-In my case, I want to install it in `~/.easifem/extpkgs`. I have already set an environment variable `export EASIFEM_EXTPKGS=~/.easifem/extpkgs`, so I will use `${EASIFEM_EXTPKGS}`, but you can specify the path explicitly. There are several options. 
+**My Configuration:** In my case, I want to install `PLplot` in `~/.easifem/extpkgs`. I have already set an environment variable `export EASIFEM_EXTPKGS=~/.easifem/extpkgs`, so I will use `${EASIFEM_EXTPKGS}`, but you can specify the path explicitly. 
 
 - `-DCMAKE_INSTALL_PREFIX:PATH=~/.easifem/extpkgs`
 - `-DCMAKE_BUILD_TYPE:STRING=Release`, other option is `Debug`
 - `-DBUILD_SHARED_LIBS:BOOL=ON`, set `OFF` if shared lib are not desired
 - `-DBUILD_TEST:BOOL=ON`, set `OFF` you dont want to build the tests
 -  `-DENABLE_fortran:BOOL=ON`, set `OFF`, if you dont want fortran bindings
--  `-DENABLE_lua:BOOL=ON`, set `OFF` if you do not want lua bindings
-
+-  `-DENABLE_lua:BOOL=ON`, set `OFF` if you do not want Lua language bindings
 
 ```sh
 cmake -S ./ -B ~/temp/easifem-extpkgs/plplot/build -G "Unix Makefiles"  -DCMAKE_INSTALL_PREFIX=${EASIFEM_EXTPKGS} -DCMAKE_BUILD_TYPE:STRING=Release -DBUILD_SHARED_LIBS:BOOL=ON  -DBUILD_TEST:BOOL=ON -DENABLE_fortran:BOOL=ON -DENABLE_lua:BOOL=ON
@@ -114,7 +117,7 @@ Now you can go to `$EASIFEM_EXTPKGS`
 └── share
 ```
 
-contents of `/bin`
+Contents of `/bin` 📁 is shown below
 
 ```sh
 /bin
@@ -123,7 +126,7 @@ contents of `/bin`
 └── pltek
 ```
 
-contents of `/include/plplot`
+Contents of `/include/plplot` 📁
 
 ```sh
 ├── csadll.h
@@ -149,7 +152,7 @@ contents of `/include/plplot`
 └── tclMatrix.h
 ```
 
-contents of `/lib`
+Contents of `/lib` 📁
 
 ```sh
 ├── cmake
@@ -208,7 +211,7 @@ contents of `/lib`
     └── xwin.so
 ```
 
-The `lib/cmake` directory contains file necessary for using plplot with CMake. The contents of this dir are given below. 
+The `lib/cmake` directory 📁 contains files necessary for using PLplot with CMake. The contents of this directory are given below. 
 
 ```sh
 ├── export_csirocsa.cmake
@@ -262,7 +265,7 @@ The `lib/cmake` directory contains file necessary for using plplot with CMake. T
 └── plplot_exports.cmake
 ```
 
-The `lib/pkgconfig` directory contains files necessary for finding plplot using pkgconfig in CMake prokects. The contents of this dir are given below. 
+The `lib/pkgconfig` directory contains files necessary for finding PLplot using pkgconfig in CMake projects. The contents of this directory are given below. 
 
 ```sh
 ├── plplot-c++.pc
@@ -273,7 +276,7 @@ The `lib/pkgconfig` directory contains files necessary for finding plplot using 
 └── plplot-tcl.pc
 ```
 
-The `lib/fortran/modules/plplot` directory contains fortran module files as shown below.
+The `lib/fortran/modules/plplot` directory contains Fortran module files as shown below.
 
 ```sh
 ├── plfortrandemolib.mod
@@ -286,29 +289,63 @@ The `lib/fortran/modules/plplot` directory contains fortran module files as show
 └── plplot_types.mod
 ```
 
-contents of `/share`
-
-```sh
-.
-├── examples
-├── ss
-└── tcl
-```
-
 After a successful build open your `.bashrc` or `.zshrc` and add following lines to it
 
 ```sh
 export PKG_CONFIG_PATH="${PKG_CONFIG_PATH}:${EASIFEM_EXTPKGS}/lib/pkgconfig"
 ```
 
-and then in the terminal run
+Note: You have to replace `${EASIFEM}` with the PLplot installation path.
+
+Subsequently, run the following command inside terminal.
 
 ```sh
-source ~/.bashrc
+source ~/.bashrc #if bash if default SHELL
 ```
  
 or
 
 ```sh
-source ~/.zshrc 
+source ~/.zshrc #if ZSH is default
 ```
+
+## Running examples
+
+Create a directory `test` 📁
+
+```sh
+mkdir test
+cd test
+curl -o PLplot_example_1.F90 https://api.cacher.io/raw/ae828dbdfa2aebf3af0a/403d8f4836d78bddc387/PLplot_example_1.F90
+curl -o CMakeLists.txt https://api.cacher.io/raw/3ca8ef3a43180dba7f35/cbb8263d9026e996d6ca/PLplot_CMakeLists.txt
+cmake -B ./build -DFILE_NAME:STRING="PLplot_example_1.F90"
+cmake --build ./build
+./build/test
+```
+
+The content of CMakeLists.txt is given below
+
+```cmake
+CMAKE_MINIMUM_REQUIRED(VERSION 3.20.0 FATAL_ERROR)
+SET(PROJECT_NAME "plplot")
+PROJECT(${PROJECT_NAME})
+ENABLE_LANGUAGE(Fortran C)
+SET(TARGET_NAME "test")
+
+SET(PLplot_INCLUDE_DIR "$ENV{EASIFEM_EXTPKGS}/lib/fortran/modules/plplot" )
+SET(PLplot_LIBRARY "$ENV{EASIFEM_EXTPKGS}/lib/libplplot.so" )
+SET(PLplot_Fortran_LIBRARY "$ENV{EASIFEM_EXTPKGS}/lib/libplplotfortran.so" )
+OPTION(FILE_NAME "File name")
+ADD_EXECUTABLE(${TARGET_NAME} ${FILE_NAME})
+
+TARGET_LINK_LIBRARIES(
+  ${TARGET_NAME}
+  ${PLplot_LIBRARY}
+  ${PLplot_Fortran_LIBRARY} )
+
+TARGET_INCLUDE_DIRECTORIES( ${TARGET_NAME} PRIVATE ${PLplot_INCLUDE_DIR} )
+```
+
+You should see the following result.
+
+![PLplot_example_1](../assets/images/PLplot_example_1.svg)
