@@ -103,3 +103,34 @@ a={x=10, y=20, z=30, name="point1"}
 a.name --> "point1"
 a.name = nil --> a.name is gone
 ```
+
+## Insert an element
+
+```lua
+t={}
+table.insert(t, 1, 10) --> insert 10 at t[1]
+table.insert(t,20) --> insert 20 at t[2]
+table.insert(t, "x", 30) --> t["x"] = 30
+```
+
+## Removing an element
+
+```lua
+t={1,2,3,4}
+table.remove(t) --> remove the last element
+table.remove(t,1) --> remove first element
+```
+
+
+## Table traversal
+
+We can traverse all key-value pairs in a table with the `pairs` iterator. 
+
+```lua
+t={x=10, y=20, z=30}
+for k, v in pairs(t) do
+  print(k,v)
+end
+```
+
+
