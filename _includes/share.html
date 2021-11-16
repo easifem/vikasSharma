@@ -1,0 +1,37 @@
+<div class="mt-auto py-3 text-left">
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-share-alt"></i> Share the page with <i class="fas fa-heart"></i>
+  </small>
+
+  <div class="container-fluid justify-content-center">
+
+    {%- assign unfocused_color = "6c757d" -%}
+
+    {%- assign service_name = "facebook" -%}
+    {%- assign service_data = site.data.social-media[service_name] -%}
+    {%- if service_data -%}
+    <a class="social mx-1" href="https://www.facebook.com/sharer/sharer.php?u={{site.url}}{{page.url}}" onclick="window.open(this.href,'mywin','left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" style="color: #{{ unfocused_color }}" onMouseOver="this.style.color='#{{ service_data.color }}'" onMouseOut="this.style.color='#{{ unfocused_color }}'"><i class="{{ service_data.icon }} fa-1x"></i></a>
+    {%- endif -%}
+
+    {%- assign service_name = "twitter" -%}
+    {%- assign service_data = site.data.social-media[service_name] -%}
+    {%- if service_data -%}
+    <a class="social mx-1" href="https://twitter.com/intent/tweet?text=&url={{site.url}}{{page.url}}" onclick="window.open(this.href,'mywin','left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" style="color: #{{ unfocused_color }}" onMouseOver="this.style.color='#{{ service_data.color }}'" onMouseOut="this.style.color='#{{ unfocused_color }}'"><i class="{{ service_data.icon }} fa-1x"></i></a>
+    {%- endif -%}
+
+    {%- assign service_name = "linkedin" -%}
+    {%- assign service_data = site.data.social-media[service_name] -%}
+    {%- if service_data -%}
+    <a class="social mx-1" href="https://www.linkedin.com/shareArticle?mini=true&url={{site.url}}{{page.url}}" onclick="window.open(this.href,'mywin','left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" style="color: #{{ unfocused_color }}" onMouseOver="this.style.color='#{{ service_data.color }}'" onMouseOut="this.style.color='#{{ unfocused_color }}'"><i class="{{ service_data.icon }} fa-1x"></i></a>
+    {%- endif -%}
+
+    {%- assign service_name = "email" -%}
+    {%- assign service_data = site.data.social-media[service_name] -%}
+    {%- if service_data -%}
+    <a class="social mx-1" href="mailto:?subject=&amp;body=Check out this site {{site.url}}{{page.url}}"
+      style="color: #{{ unfocused_color }}" onMouseOver="this.style.color='#{{ service_data.color }}'"
+      onMouseOut="this.style.color='#{{ unfocused_color }}'"><i class="{{ service_data.icon }} fa-1x"></i></a>
+    {%- endif -%}
+</div>
+</div>
