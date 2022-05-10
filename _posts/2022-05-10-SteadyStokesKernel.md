@@ -33,24 +33,6 @@ $$
 d_{ij}=\frac{1}{2}\left(\frac{\partial v_{i}}{\partial x_{j}}+\frac{\partial v_{j}}{\partial x_{i}}\right)
 $$
 
-## VMS stabilized form
-
-$$
-\begin{aligned} & \int_{\Omega}2\mu\nabla\delta{\bf v}:{\bf d}({\bf v})d\Omega-\int_{\Omega}p\nabla\cdot\delta{\bf v}d\Omega+\int_{\Omega}\delta p\nabla\cdot{\bf v}d\Omega\\ & +\sum_{e}\int_{\Omega_{e}}\rho^{-1}\tau_{SUPS}\nabla\delta p\cdot{\bf r}_{M}\left(\boldsymbol{v},p\right)d\Omega\\ & \pm\sum_{e}\int_{\Omega_{e}}\rho^{-1}\tau_{SUPS}\nabla\cdot2\mu{\bf d}\left(\delta{\bf v}\right)\cdot{\bf r}_{M}\left(\boldsymbol{v},p\right)d\Omega\\ & +\sum_{e}\int_{\Omega_{e}}\left(\nabla\cdot\delta\bar{{\bf v}}\right)\rho\nu_{LSIC}\nabla\cdot{\bf v}d\Omega\\ & =\int_{\Omega}\delta v_{i}\rho b_{i}d\Omega+\int_{\Gamma_{i}^{h}}\delta v_{i}h_{i}d\Omega \end{aligned}
-$$
-
-### Weak form of conservation of linear momentum
-
-$$
-\begin{aligned} & \int_{\Omega}2\mu\nabla\delta{\bf v}:{\bf d}({\bf v})d\Omega\\ & \mp\sum_{e}\int_{\Omega_{e}}\rho^{-1}\tau_{SUPS}\left\{ \nabla\cdot2\mu{\bf d}\left(\delta{\bf v}\right)\right\} \cdot\left\{ \nabla\cdot2\mu{\bf d}\left({\bf v}\right)\right\} d\Omega\\ & +\sum_{e}\int_{\Omega_{e}}\left(\nabla\cdot\delta\bar{{\bf v}}\right)\rho\nu_{LSIC}\nabla\cdot{\bf v}d\Omega\\ & -\int_{\Omega}\left(\nabla\cdot\delta{\bf v}\right)pd\Omega\\ & \pm\sum_{e}\int_{\Omega_{e}}\rho^{-1}\tau_{SUPS}\left\{ \nabla\cdot2\mu{\bf d}\left(\delta{\bf v}\right)\right\} \cdot\nabla pd\Omega\\ & =\int_{\Omega}\delta v_{i}\rho b_{i}d\Omega+\int_{\Gamma_{i}^{h}}\delta v_{i}h_{i}d\Omega\\ & \pm\sum_{e}\int_{\Omega_{e}}\rho^{-1}\tau_{SUPS}\left\{ \nabla\cdot2\mu{\bf d}\left(\delta{\bf v}\right)\right\} \cdot\left\{ \rho\mathbf{b}\right\} d\Omega \end{aligned}
-$$
-
-### Conservation of mass
-
-$$
-\begin{aligned} & \int_{\Omega}\delta p\nabla\cdot{\bf v}d\Omega-\sum_{e}\int_{\Omega_{e}}\rho^{-1}\tau_{SUPS}\nabla\delta p\cdot\left\{ \nabla\cdot2\mu{\bf d}({\bf v})\right\} d\Omega\\ & +\sum_{e}\int_{\Omega_{e}}\rho^{-1}\tau_{SUPS}\nabla\delta p\cdot\nabla pd\Omega=\sum_{e}\int_{\Omega_{e}}\rho^{-1}\tau_{SUPS}\nabla\delta p\cdot\rho\mathbf{b}d\Omega \end{aligned}
-$$
-
 ## SteadyStokes111 Kernel in EASIFEM
 
 ### Declare some variables
