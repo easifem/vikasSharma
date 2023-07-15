@@ -1,7 +1,7 @@
 ---
 name: Determination of Thermal Regime in Sandy Soils, Mathematical Framework ATHERES
 tools: [soils, thermal conductivity, thermal flux, heat flux sensor, 2017]
-image: ../assets/images/publications/IJOG_Somenath_et_al_2017_1.png
+image: ../assets/images/publications/IJOG_Somenath_et_al_2017_1.jpg
 ---
 
 # Determination of Thermal Regime in Sandy Soils: Mathematical Framework ATHERES
