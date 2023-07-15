@@ -1,6 +1,7 @@
 ---
 name: A Methodology to Establish Freezing Characteristics of Partially Saturated Sands
 tools: [Frozen soils, SFCC, Ice content, Dielectric models, 2021]
+image: ../assets/images/publications/CRST_Lijith_et_al_2021_1.png
 ---
 
 # A methodology to establish freezing characteristics of partially saturated sands
