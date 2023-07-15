@@ -1,9 +1,11 @@
 ---
 name: Space-Time Finite Element Method for Transient and Unconfined Seepage Flow Analysis
 tools: [Space-time FEM, Unconfined seepage flow, Moving boundary problem, 2021]
-image: https://dm2302files.storage.live.com/y4mKsDXh_B_IR_u1m2rTxkjUUc8onADWAQaCo2qR8shBYr2r9MnOzInQk3S0S1dkvFGLoMlmkmeuTs9fippOfckuDLOzbBAScU0_pfItJ1hHAXfMcFZHFhi0Me4VemrpVSKlki86_y-VCuQtCqlzjCqfj3qOvdc9rLMtd48e3r6WwPFc6laQmF-MnY6ID9TH76S?width=692&height=560&cropmode=none
-# description: In this paper, space–time finite element method is developed for solving the unsteady unconfined seepage flow problem. This paper also present the details of a automatic mesh moving technique.
+image: ../assets/images/publications/FEAD_Sharma_et_al_2021.png
+## description: In this paper, space–time finite element method is developed for solving the unsteady unconfined seepage flow problem. This paper also present the details of a automatic mesh moving technique.
 ---
+
+<!-- image: https://dm2302files.storage.live.com/y4mKsDXh_B_IR_u1m2rTxkjUUc8onADWAQaCo2qR8shBYr2r9MnOzInQk3S0S1dkvFGLoMlmkmeuTs9fippOfckuDLOzbBAScU0_pfItJ1hHAXfMcFZHFhi0Me4VemrpVSKlki86_y-VCuQtCqlzjCqfj3qOvdc9rLMtd48e3r6WwPFc6laQmF-MnY6ID9TH76S?width=692&height=560&cropmode=none -->
 
 # Space-Time Finite Element Method for Transient and Unconfined Seepage Flow Analysis
 
